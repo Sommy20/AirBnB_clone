@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Amenity class """
+""" City class """
 
 import uuid
 from datetime import datetime
@@ -7,6 +7,7 @@ from models import storage
 from models.base_model import BaseModel
 
 
-class Amenity(BaseModel):
-    """ Amenity class """
+class City(BaseModel):
+    """ City class """
+    state_id = ""
     name = ""
