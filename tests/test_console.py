@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module for TestHBNBCommand class."""
+"""Module for TestHBNBCommand main class."""
 
 from console import HBNBCommand
 from models.engine.file_storage import FileStorage
@@ -14,7 +14,7 @@ import os
 
 class TestHBNBCommand(unittest.TestCase):
 
-    """Tests HBNBCommand console."""
+    """Tests HBNBCommand main console."""
 
     attribute_values = {
         str: "foobar108",
