@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" City class """
+""" Main City class """
 
 import uuid
 from datetime import datetime
