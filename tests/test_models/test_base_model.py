@@ -6,20 +6,20 @@ from models.base_model import BaseModel
 import pep8
 
 class TestBaseModel(unittest.TestCase):
-    """test BaseModel"""
+    """test BaseModel main """
 
     def setUp(self):
         self.testbasemodel = BaseModel()
 
     def test_pep8_BaseModel(self):
-        """Testing for pep8"""
+        """Testing for pep8 main """
         style = pep8.StyleGuide(quiet=True)
         p = style.check_files(['models/base_model.py'])
         self.assertEqual(p.total_errors, 0, "Check pep8")
 
 
     def test_save_BaesModel(self):
-        """test save_Basemodel"""
+        """test save_Basemodel main """
         self.base.save()
         self.assertNotEqual(self.base.created_at, self.base.updated_at)
 
