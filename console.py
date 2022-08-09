@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Class HBNBComand a program called console.py
+"""Class HBNBComand a main program called console.py
 """
 
 import cmd
@@ -18,7 +18,7 @@ classes = {'BaseModel': BaseModel, 'User': User, 'Place': Place,
 
 
 class HBNBCommand(cmd.Cmd):
-    """ hbnb command interpreter """
+    """ hbnb command main interpreter """
     prompt = '(hbnb) '
 
     def do_EOF(self, arg):
