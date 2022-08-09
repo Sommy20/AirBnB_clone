@@ -11,13 +11,13 @@ class Test_City(unittest.TestCase):
     """ Tests city """
 
     def test_pep8_City(self):
-        """Tests pep8 style"""
+        """Tests pep8 style main """
         style = pep8.StyleGuide(quiet=True)
         p = style.check_files(['models/city.py'])
         self.assertEqual(p.total_errors, 0, "Check pep8")
 
     def test_City_dict(self):
-        """ City_dict """
+        """ City_dict main """
         self.assertTrue('id' in self.city.__dict__)
         self.assertTrue('created_at' in self.city.__dict__)
         self.assertTrue('updated_at' in self.city.__dict__)
@@ -27,7 +27,7 @@ class Test_City(unittest.TestCase):
 
 
     def test_save_City(self):
-        """ save_city """
+        """ save_city main """
         self.city.save()
         self.assertNotEqual(self.city.created_at, self.city.updated_at)
 
