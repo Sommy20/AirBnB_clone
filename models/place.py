@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Place class """
+""" main Place class """
 
 import uuid
 from datetime import datetime
