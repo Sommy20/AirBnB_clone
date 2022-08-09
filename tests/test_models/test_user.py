@@ -17,7 +17,7 @@ from models.engine.file_storage import FileStorage
 class TestUser(unittest.TestCase):
 
     def setUp(self):
-        """SetUp method"""
+        """SetUp method main"""
         self.user1 = User()
         self.user1.email = "1452@holbertonschool.com"
         self.user1.password = "aeiou12345"
@@ -31,7 +31,7 @@ class TestUser(unittest.TestCase):
         self.assertEqual(result.total_errors, 0)
 
     def test_docstring(self):
-        """test docstring in the file"""
+        """test docstring in  the main file"""
         self.assertIsNotNone(User.__doc__)
 
     def test_is_instance(self):
