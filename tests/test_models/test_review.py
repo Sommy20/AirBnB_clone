@@ -17,14 +17,14 @@ from models.engine.file_storage import FileStorage
 class TestReview(unittest.TestCase):
 
     def setUp(self):
-        """SetUp method"""
+        """SetUp method main """
         self.review1 = Review()
         self.review1.place_id = "24g5gk2gk234"
         self.review1.user_id = "3r45t9s323d9"
         self.review1.text = "Loren ipsum"
 
     def test_base_pep8(self):
-        """Test for pep8"""
+        """Test for pep8 main"""
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['./models/review.py'])
         self.assertEqual(result.total_errors, 0)
