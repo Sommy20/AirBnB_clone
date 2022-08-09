@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Review class
+""" Main Review class
 """
 
 import uuid
