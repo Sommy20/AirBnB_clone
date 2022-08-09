@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" User class """
+""" Main User class """
 
 import uuid
 from models.base_model import BaseModel
