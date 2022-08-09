@@ -9,16 +9,16 @@ from models import amenity
 Amenity = amenity.Amenity
 
 class Test_Amenity(unittest.TestCase):
-    """ Tests amenity """
+    """ Tests amenity main """
 
     def test_pep8(self):
-        """ Tests the pep8 """
+        """ Tests the pep8 main """
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['models/amenity.py'])
         self.assertEqual(result.total_errors, 0, "Check pep8")
 
     def test_Amenity_dict(self):
-        """Amenity_dict"""
+        """Amenity_dict main """
         self.assertTrue('id' in self.amenity.__dict__)
         self.assertTrue('created_at' in self.amenity.__dict__)
         self.assertTrue('updated_at' in self.amenity.__dict__)
