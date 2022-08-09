@@ -14,7 +14,7 @@ from models.review import Review
 
 
 class TestFileStorage(unittest.TestCase):
-    ''' Test File storage '''
+    ''' Test File storage main '''
 
     def test_pep8_FileStorage(self):
         """Tests pep8 style"""
