@@ -7,17 +7,17 @@ from models import place
 from models.base_model import BaseModel
 
 class Test_Place(unittest.TestCase):
-    """ Tests Place """
+    """ Tests Place main """
 
     def test_pep8(self):
-        """ Tests pep8 """
+        """ Tests pep8 main """
         pep8style = pep8.StyleGuide(quite=True)
         result = pep8style.check_files(["models/place.py"])
         self.assertEqual(result.total_errors, 0, "Check pep8")
 
 
     def test_Place_dict(self):
-        """ Place_dict """
+        """ Place_dict main """
         self.assertTrue('id' in self.place.__dict__)
         self.assertTrue('created_at' in self.place.__dict__)
         self.assertTrue('updated_at' in self.place.__dict__)
@@ -27,7 +27,7 @@ class Test_Place(unittest.TestCase):
         self.assertTrue('__class__' in self.place.__dict__)
 
     def test_save_Place(self):
-        """ Save_Place """
+        """ Save_Place main """
         self.place.save()
         self.assertNotEqual(self.place.created_at, self.place.updated_at)
 
