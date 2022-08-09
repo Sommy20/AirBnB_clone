@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Amenity class """
+""" main Amenity class """
 
 import uuid
 from datetime import datetime
