@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Class FileStorage """
+"""Main Class FileStorage """
 from json import dump, load, dumps
 from os.path import exists
 from models import base_model, user, place, state, city, amenity, review
@@ -16,7 +16,7 @@ name_class = ["BaseModel", "City", "State",
 
 
 class FileStorage:
-    """
+    """class called filestorage
     """
     __file_path = "file.json"
     __objects = {}
