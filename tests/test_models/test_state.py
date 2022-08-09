@@ -7,7 +7,7 @@ import unittest
 
 
 class TestStateDocs(unittest.TestCase):
-    """ Test docstring in the class """
+    """ Test docstring in the class main """
 
     def test_doc_class(self):
         """ Test document class """
@@ -15,7 +15,7 @@ class TestStateDocs(unittest.TestCase):
         assert doc is not None
 
     def test_doc_methods_class(self):
-        """ Test document methods Class """
+        """ Test document methods Class main """
         l_method = ["save", "__init__", "__str__", "to_dict"]
         for key in State.__dict__.keys():
             if key is l_method:
