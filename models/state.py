@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" State class """
+""" main State class """
 
 import uuid
 from datetime import datetime
