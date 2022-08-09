@@ -1,39 +1,40 @@
 #!/usr/bin/python3
-""" Test city """
-
-import unittests
-import pep8
-import os
-from models import City
-from models.base_model import BaseModel
-
-class Test_City(unittest.TestCase):
-    """ Tests city """
-
-    def test_pep8_City(self):
-        """Tests pep8 style main """
-        style = pep8.StyleGuide(quiet=True)
-        p = style.check_files(['models/city.py'])
-        self.assertEqual(p.total_errors, 0, "Check pep8")
-
-    def test_City_dict(self):
-        """ City_dict main """
-        self.assertTrue('id' in self.city.__dict__)
-        self.assertTrue('created_at' in self.city.__dict__)
-        self.assertTrue('updated_at' in self.city.__dict__)
-        self.assertTrue('state_id' in self.city.__dict__)
-        self.assertTrue('name' in self.city.__dict__)
-        self.assertTrue('__class__' in self.city.__dict__)
+"""
+Unittest for user.py
+"""
+import unittest
+from models.city import City
+import datetime
 
 
-    def test_save_City(self):
-        """ save_city main """
-        self.city.save()
-        self.assertNotEqual(self.city.created_at, self.city.updated_at)
+class TestCity(unittest.TestCase):
+    """Tests instances and methods from city class"""
 
-    def test_inst(self):
-        """ test_inst"""
-        self.assertIsInstance(self.new_city, City)
+    c = City()
 
-if __name__ == "__main__":
+    def test_class_exists(self):
+        """tests if class exists"""
+        self.assertEqual(str(type(self.c)), "<class 'models.city.City'>")
+
+    def test_user_inheritance(self):
+        """test if city is a subclass of BaseModel"""
+        self.assertTrue(self.c, City)
+
+    def testHasAttributes(self):
+        """verify if attributes exist"""
+        self.assertTrue(hasattr(self.c, 'state_id'))
+        self.assertTrue(hasattr(self.c, 'name'))
+        self.assertTrue(hasattr(self.c, 'id'))
+        self.assertTrue(hasattr(self.c, 'created_at'))
+        self.assertTrue(hasattr(self.c, 'updated_at'))
+
+    def test_types(self):
+        """tests if the type of the attribute is the correct one"""
+        self.assertIsInstance(self.c.state_id, str)
+        self.assertIsInstance(self.c.name, str)
+        self.assertIsInstance(self.c.id, str)
+        self.assertIsInstance(self.c.created_at, datetime.datetime)
+        self.assertIsInstance(self.c.updated_at, datetime.datetime)
+
+if __name__ == '__main__':
     unittest.main()

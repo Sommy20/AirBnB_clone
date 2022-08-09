@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-""" Main User class """
-
-import uuid
+"""
+User creation class
+"""
 from models.base_model import BaseModel
 
 
 class User(BaseModel):
-    """ User class """
+    """Defines attributes for user creation"""
     email = ""
     password = ""
     first_name = ""

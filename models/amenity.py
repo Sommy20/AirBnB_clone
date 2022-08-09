@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-""" Main Amenity class """
-
-import uuid
-from datetime import datetime
-from models import storage
+"""
+Defines amenities
+"""
 from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):
-    """ Amenity class """
+    """Defines amenities that user can choose from to offer at its place"""
     name = ""

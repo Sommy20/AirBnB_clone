@@ -1,13 +1,11 @@
 #!/usr/bin/python3
-""" Main City class """
-
-import uuid
-from datetime import datetime
-from models import storage
+"""
+Defines city
+"""
 from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """ City class """
+    """defines city to look for"""
     state_id = ""
     name = ""
